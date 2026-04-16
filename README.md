@@ -1,9 +1,9 @@
 <!-- HERO SECTION -->
-<h1 align="center">Your'e welcome😊, I'm Joseph Manizabayo</h1>
+<h1 align="center">Your'e welcome, I'm Joseph Manizabayo</h1>
 <h3 align="center">Full Stack Software Engineer | Building Scalable Systems & Intelligent Platforms</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00F7FF&center=true&vCenter=true&lines=Full+Stack+Engineer;Microservices+Architect;AI+Feature+Builder;Always+Learning+🚀" />
+  <img src="https://readme-typing-svg.herokuapp.com?color=00F7FF&center=true&vCenter=true&lines=Full+Stack+Engineer;Microservices+Architect;AI+Feature+Builder;UI/UX+Professional;Always+Curious+🔥;Always+Learning+🚀;" />
 </p>
 
 <!-- BANNER -->
