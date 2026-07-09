@@ -12,7 +12,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Reveal Animations on Scroll
+// Reveal Animations on Scroll (Supports Reveal Up, Left, and Right)
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -23,7 +23,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     threshold: 0.15
 });
 
-document.querySelectorAll('.reveal').forEach(el => {
+document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right').forEach(el => {
     revealObserver.observe(el);
 });
 
@@ -86,39 +86,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // ==========================================
-// DARK / LIGHT THEME TOGGLE
-// ==========================================
-const initThemeToggle = () => {
-    const themeToggleBtn = document.getElementById('themeToggle');
-    if (!themeToggleBtn) return;
-
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    
-    // Set initial theme
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(themeToggleBtn, currentTheme);
-
-    themeToggleBtn.addEventListener('click', () => {
-        const activeTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(themeToggleBtn, newTheme);
-    });
-};
-
-const updateThemeIcon = (btn, theme) => {
-    const icon = btn.querySelector('i');
-    if (!icon) return;
-    if (theme === 'light') {
-        icon.className = 'fa-solid fa-moon';
-    } else {
-        icon.className = 'fa-solid fa-sun';
-    }
-};
-
-// ==========================================
 // FAQ ACCORDION INTERACTIVITY
 // ==========================================
 const initFaqAccordion = () => {
@@ -143,6 +110,5 @@ const initFaqAccordion = () => {
 
 // Initialize new functionalities
 document.addEventListener('DOMContentLoaded', () => {
-    initThemeToggle();
     initFaqAccordion();
-});
+});

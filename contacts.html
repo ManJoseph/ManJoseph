@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favs/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favs/favicon-16x16.png">
     <link rel="icon" href="favs/favicon.ico">
-    <title>Contact Me - Joseph Portfolio</title>
+    <title>Contact & FAQs - Joseph Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
@@ -30,40 +30,66 @@
         <a href="mailto:josephmanizabayo7@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
 
-    <!-- Added data-target but contacts usually doesn't have sections? 
-         Kept it simple or mapped to sections if they existed. 
-         Since contact is one page, maybe map to parts of it or just static.
-         User wanted "numbers to slide". Assuming purely scroll spy if sections exist. 
-    -->
+    <!-- Page Progress Mapping Sections -->
     <div class="page-progress">
-        <div class="progress-item">01</div>
-        <div class="progress-item">02</div>
-        <div class="progress-item">03</div>
-        <div class="progress-item active" data-target=".contact-hero">04</div>
+        <div class="progress-item active" data-target="#faq">01</div>
+        <div class="progress-item" data-target="#contact">02</div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <a href="index.html" class="logo">ManJoseph</a>
-        <div class="nav-actions">
-            <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
-                <i class="fa-solid fa-sun"></i>
-            </button>
-            <div class="hamburger">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="experience.html">Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contacts.html" class="active">Contact</a></li>
         </ul>
     </nav>
 
-    <section class="contact-hero reveal active">
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="immersive-section reveal-up">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item reveal-left">
+                <div class="faq-question">
+                    <span>Are you open to remote work and relocation?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, absolutely! I am highly open to remote software engineering positions and relocation opportunities worldwide.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item reveal-right">
+                <div class="faq-question">
+                    <span>What is your primary software stack?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>My core competencies are centered on backend engineering using Java (Spring Boot) and Python (Django/Flask), paired with SQL/PostgreSQL databases, Docker container environments, and React/HTML5/CSS3 frontend clients.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal-left">
+                <div class="faq-question">
+                    <span>Do you take on freelance consultations?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! I work on freelance project architectures, backend developments, and custom system optimizations. Drop me a line through the contact form below.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-hero reveal-up">
         <!-- Split Layout: Content Left, Form Right -->
-         <div class="contact-content">
+         <div class="contact-content reveal-left">
             <h1>Let's Create<br>Something Amazing.</h1>
             <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">
                 Have a project in mind? Looking for a partner who cares about your product as much as you do? Drop me a line.
@@ -74,7 +100,7 @@
             </div>
          </div>
 
-        <div class="contact-form-container">
+        <div class="contact-form-container reveal-right">
             <form class="contact-form" id="contactForm" method="POST">
                 <div class="form-group">
                     <input type="text" 
@@ -106,10 +132,10 @@
                 </div>
                 <div class="form-group">
                     <textarea id="message" 
-                              name="message" 
-                              placeholder="Tell me about your project..."
-                              maxlength="1000"
-                              required></textarea>
+                               name="message" 
+                               placeholder="Tell me about your project..."
+                               maxlength="1000"
+                               required></textarea>
                 </div>
                 <button type="submit" class="cta-button" style="background: transparent; width: 100%; margin-top: 1rem;">Send Message</button>
             </form>
@@ -127,8 +153,8 @@
                 <div class="footer-col">
                     <h4>Navigation</h4>
                     <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="experience.html">Experience</a></li>
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="contacts.html">Contact</a></li>
                     </ul>
@@ -136,8 +162,8 @@
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="resume.pdf" target="_blank">View Resume</a></li>
-                        <li><a href="resume.pdf" download>Download CV</a></li>
+                        <li><a href="Joseph_Manizabayo_CV_2026.pdf" target="_blank">View Resume</a></li>
+                        <li><a href="Joseph_Manizabayo_CV_2026.pdf" download>Download CV</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -160,5 +186,16 @@
     <div class="toast-container"></div>
     <script src="contacts.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Inline script to handle click if script.js isn't caching or to ensure it works
+        document.querySelectorAll('.progress-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                if(target) {
+                    document.querySelector(target).scrollIntoView({behavior: 'smooth'});
+                }
+            });
+        });
+    </script>
 </body>
 </html>
