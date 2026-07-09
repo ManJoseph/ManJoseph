@@ -95,13 +95,13 @@ const initFaqAccordion = () => {
         question.addEventListener('click', () => {
             const item = question.parentElement;
             
-            // Toggle active class on current item
-            item.classList.toggle('active');
+            // Toggle faq-open class on current item
+            item.classList.toggle('faq-open');
             
             // Optional: Close other FAQs (Accordion effect)
             document.querySelectorAll('.faq-item').forEach(otherItem => {
-                if (otherItem !== item && otherItem.classList.contains('active')) {
-                    otherItem.classList.remove('active');
+                if (otherItem !== item && otherItem.classList.contains('faq-open')) {
+                    otherItem.classList.remove('faq-open');
                 }
             });
         });

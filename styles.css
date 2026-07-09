@@ -1046,11 +1046,11 @@ html, body, section, nav, .navbar, .skill-card, .skills-category-card, .project-
     font-size: 1rem;
     line-height: 1.6;
 }
-.faq-item.active {
+.faq-item.faq-open {
     border-color: var(--accent);
     background: rgba(46, 204, 113, 0.01);
 }
-.faq-item.active .faq-answer {
+.faq-item.faq-open .faq-answer {
     max-height: 1000px;
     padding-bottom: 1.25rem;
     transition: max-height 0.8s cubic-bezier(1, 0, 1, 0);
@@ -1059,7 +1059,7 @@ html, body, section, nav, .navbar, .skill-card, .skills-category-card, .project-
     transition: transform 0.3s ease;
     color: var(--accent);
 }
-.faq-item.active .faq-icon {
+.faq-item.faq-open .faq-icon {
     transform: rotate(180deg);
 }
 
