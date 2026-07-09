@@ -1081,9 +1081,11 @@ html, body, section, nav, .navbar, .skill-card, .skills-category-card, .project-
     margin-top: 2rem;
 }
 .github-stats-container img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 495px;
     height: auto;
     border-radius: 8px;
+    object-fit: contain;
 }
 .github-stats-container img:hover {
     transform: scale(1.01);
@@ -1149,11 +1151,8 @@ html, body, section, nav, .navbar, .skill-card, .skills-category-card, .project-
     font-size: 0.85rem;
 }
 
-/* Override responsive behavior to handle theme button */
+/* Override responsive behavior to handle mobile responsiveness */
 @media (max-width: 768px) {
-    .nav-actions {
-        margin-right: 1.5rem;
-    }
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -1164,6 +1163,52 @@ html, body, section, nav, .navbar, .skill-card, .skills-category-card, .project-
     }
     .footer-bottom {
         flex-direction: column;
+    }
+    .skill-card, .skills-category-card, .cert-card {
+        padding: 1.5rem;
+    }
+    .featured-card {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-category-grid, .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    .timeline-container {
+        padding-left: 20px;
+    }
+    .timeline-dot {
+        left: -31px;
+    }
+    .timeline-role {
+        font-size: 1.2rem;
+    }
+    .faq-question {
+        padding: 1.25rem 1.25rem;
+        font-size: 1rem;
+    }
+    .faq-answer {
+        padding: 0 1.25rem 1.25rem;
+        font-size: 0.95rem;
+    }
+    .immersive-section {
+        padding: 4rem 1.5rem;
+    }
+    .hero {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .project-showcase {
+        padding: 4rem 1.5rem;
+    }
+    .project-title {
+        font-size: 2rem;
     }
 }
 
