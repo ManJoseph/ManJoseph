@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favs/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favs/favicon-16x16.png">
     <link rel="icon" href="favs/favicon.ico">
-    <title>Joseph Portfolio</title>
+    <title>Joseph Portfolio - Full Stack Software Engineer</title>
     <!-- link to fontawesome for inserting social media icons-->
      <link rel="stylesheet" 
      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
@@ -28,15 +28,25 @@
     <div class="page-progress">
         <div class="progress-item active" data-target="#home">01</div>
         <div class="progress-item" data-target="#about">02</div>
-        <div class="progress-item" data-target="#certifications">03</div>
-        <div class="progress-item" data-target="#workflow">04</div>
+        <div class="progress-item" data-target="#experience">03</div>
+        <div class="progress-item" data-target="#featured-project">04</div>
+        <div class="progress-item" data-target="#skills">05</div>
+        <div class="progress-item" data-target="#certifications">06</div>
+        <div class="progress-item" data-target="#github">07</div>
+        <div class="progress-item" data-target="#timeline">08</div>
+        <div class="progress-item" data-target="#faq">09</div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <a href="index.html" class="logo">ManJoseph</a>
-        <div class="hamburger">
-            <i class="fa-solid fa-bars"></i>
+        <div class="nav-actions">
+            <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
         <ul class="nav-links">
             <li><a href="#home" class="active">Home</a></li>
@@ -52,9 +62,12 @@
             <h1>Full-Stack<br>Software Engineer.</h1>
             <p class="hero-greeting">Hi, I'm Joseph Manizabayo.</p>
             <p class="hero-subtitle">
-                Focused on building scalable backend systems, seamless mobile experiences, and digital products that make a difference.
+                Focused on building scalable backend systems, secure architectures, and intelligent digital products that make a difference.
             </p>
-            <a href="contacts.html" class="cta-button">Let's Connect</a>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="contacts.html" class="cta-button">Let's Connect</a>
+                <a href="#resume" class="cta-button" style="background: transparent; color: var(--text);">View Resume</a>
+            </div>
         </div>
         <!-- Restored Hero Image -->
         <div class="hero-image-container reveal">
@@ -62,89 +75,373 @@
         </div>
     </section>
 
+    <!-- Tech Stack Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <div class="marquee-item"><i class="fa-brands fa-java"></i> Java</div>
+            <div class="marquee-item"><i class="fa-solid fa-leaf"></i> Spring Boot</div>
+            <div class="marquee-item"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="marquee-item"><i class="fa-solid fa-cube"></i> Django</div>
+            <div class="marquee-item"><i class="fa-brands fa-react"></i> React</div>
+            <div class="marquee-item"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="marquee-item"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+            <div class="marquee-item"><i class="fa-brands fa-aws"></i> AWS</div>
+            <div class="marquee-item"><i class="fa-brands fa-git-alt"></i> Git</div>
+            <div class="marquee-item"><i class="fa-brands fa-linux"></i> Linux</div>
+            <div class="marquee-item"><i class="fa-solid fa-mobile-screen"></i> Swift</div>
+            <!-- Duplicated Set for Loop -->
+            <div class="marquee-item"><i class="fa-brands fa-java"></i> Java</div>
+            <div class="marquee-item"><i class="fa-solid fa-leaf"></i> Spring Boot</div>
+            <div class="marquee-item"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="marquee-item"><i class="fa-solid fa-cube"></i> Django</div>
+            <div class="marquee-item"><i class="fa-brands fa-react"></i> React</div>
+            <div class="marquee-item"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="marquee-item"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+            <div class="marquee-item"><i class="fa-brands fa-aws"></i> AWS</div>
+            <div class="marquee-item"><i class="fa-brands fa-git-alt"></i> Git</div>
+            <div class="marquee-item"><i class="fa-brands fa-linux"></i> Linux</div>
+            <div class="marquee-item"><i class="fa-solid fa-mobile-screen"></i> Swift</div>
+        </div>
+    </div>
+
     <!-- About Section -->
     <section id="about" class="immersive-section reveal">
         <h2>About Me</h2>
-        <p style="max-width: 800px; color: var(--text-muted); font-size: 1.2rem; margin-bottom: 3rem;">
-            My journey in technology is driven by a genuine passion for solving real-world problems and engineering secure, robust systems. I don't just write software; I craft solutions that prioritize security and tangible impact. Whether it's architecting a secure backend or optimizing a critical workflow, I am dedicated to delivering quality systems that truly make a difference.
+        <p style="max-width: 800px; color: var(--text-muted); font-size: 1.2rem; margin-bottom: 2rem;">
+            My journey in technology is driven by a genuine passion for solving real-world problems and engineering secure, robust systems. I don't just write software; I craft solutions that prioritize security, clean architecture, and tangible impact. 
         </p>
+        <div style="max-width: 800px; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; margin-bottom: 3rem;">
+            <p style="font-style: italic; color: var(--text-muted); line-height: 1.6;">
+                <b>Coding Philosophy:</b> "I believe software should solve real problems while remaining maintainable, scalable, secure, and enjoyable to use. I value clean architecture, thoughtful design, continuous learning, and collaborative development."
+            </p>
+        </div>
         
         <div class="skills-grid">
             <div class="skill-card">
                 <i class="fa-solid fa-code"></i>
                 <p><b>Software Engineering</b></p>
-                <p>Django, Python, Java, JavaScript, RESTful APIs</p>
+                <p>Java, Python, PHP, JavaScript, Django, Spring Boot, RESTful APIs, Microservices</p>
             </div>
             <div class="skill-card">
                 <i class="fa-solid fa-wrench"></i>
                 <p><b>Testing & Tools</b></p>
-                <p>Postman, Git/GitHub, Docker, CI/CD</p>
+                <p>Postman, Git/GitHub, Docker, Linux, Nginx, CI/CD</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="immersive-section reveal">
+        <h2>Professional Experience</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-role">Software Architect & Solo Developer</div>
+                        <div class="timeline-company">MYESolution</div>
+                    </div>
+                    <div class="timeline-date">2024 - Present</div>
+                </div>
+                <div class="timeline-desc">
+                    Architected, designed, and built a comprehensive, role-based digital education platform from scratch.
+                    <ul>
+                        <li>Developed a scalable microservices architecture using Spring Boot and React.</li>
+                        <li>Implemented secure JWT authentication and role-based access control for Admins, Teachers, and Students.</li>
+                        <li>Configured secure file transfers and cloud storage using Cloud R2 and Dockerized services.</li>
+                    </ul>
+                </div>
+                <div class="timeline-tech-list">
+                    <span class="tech-pill">Spring Boot</span>
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">Microservices</span>
+                    <span class="tech-pill">PostgreSQL</span>
+                    <span class="tech-pill">Docker</span>
+                    <span class="tech-pill">JWT</span>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-role">Django Developer</div>
+                        <div class="timeline-company">Hameau des Jeunes (Team Collaboration)</div>
+                    </div>
+                    <div class="timeline-date">2023 - 2024</div>
+                </div>
+                <div class="timeline-desc">
+                    Collaborated in a development team to build and scale a community platform to manage operations and facilitate youth collaboration.
+                    <ul>
+                        <li>Developed clean, secure backend APIs and views using Django and Python.</li>
+                        <li>Optimized PostgreSQL database schemas and complex queries to ensure rapid data loading.</li>
+                        <li>Worked using Agile Scrum methodologies to coordinate sprints and feature updates.</li>
+                    </ul>
+                </div>
+                <div class="timeline-tech-list">
+                    <span class="tech-pill">Django</span>
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">PostgreSQL</span>
+                    <span class="tech-pill">Agile Scrum</span>
+                    <span class="tech-pill">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project Section -->
+    <section id="featured-project" class="immersive-section reveal">
+        <h2>Featured Project</h2>
+        <div class="skills-grid" style="grid-template-columns: 1fr;">
+            <div class="skill-card" style="display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; text-align: left;">
+                <div style="flex: 1.2; min-width: 300px;">
+                    <img src="Myesolution.png" alt="MYESolution" class="showcase-img" style="max-height: 380px; width: 100%; object-fit: cover;">
+                </div>
+                <div style="flex: 1.5; min-width: 300px;">
+                    <span class="project-label" style="font-family: 'Courier New', monospace; color: var(--accent);">FLAGSHIP APP</span>
+                    <h3 style="font-size: 2.2rem; margin: 0.5rem 0 1rem; line-height: 1.2;">MYESolution Platform</h3>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        A modern, high-performance education ecosystem designed to scale. As a solo builder, I orchestrated the microservices architecture, built JWT-protected access controls, and integrated robust dockerized deployment configurations.
+                    </p>
+                    <div class="project-tech" style="margin-bottom: 2rem;">
+                        <span class="tech-pill">Spring Boot</span>
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">Cloud Storage</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">JWT</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="projects.html" class="cta-button">All Projects</a>
+                        <a href="https://www.myesolution.org" target="_blank" class="cta-button" style="background: transparent; color: var(--text);">Live Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Category Section -->
+    <section id="skills" class="immersive-section reveal">
+        <h2>Technical Skills</h2>
+        <div class="skills-category-grid">
+            <div class="skills-category-card">
+                <h3>Languages</h3>
+                <ul class="skills-list">
+                    <li><i class="fa-solid fa-chevron-right"></i> Java</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Python</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> JavaScript</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> PHP</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> SQL</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> HTML5 / CSS3</li>
+                </ul>
+            </div>
+            <div class="skills-category-card">
+                <h3>Backend & Cloud</h3>
+                <ul class="skills-list">
+                    <li><i class="fa-solid fa-chevron-right"></i> Spring Boot</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Django</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Microservices</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> RESTful APIs</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Node.js</li>
+                </ul>
+            </div>
+            <div class="skills-category-card">
+                <h3>Databases & Tools</h3>
+                <ul class="skills-list">
+                    <li><i class="fa-solid fa-chevron-right"></i> PostgreSQL</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> MySQL</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Docker</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Git / GitHub</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Nginx / Linux</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Certifications Section -->
     <section id="certifications" class="immersive-section reveal">
-        <h2>Expertise & Certifications</h2>
-        <div class="skills-grid">
-             <div class="skill-card">
-                  <i class="fa-brands fa-python"></i>
-                  <p><b>Django & Python</b></p>
-                  <p>Advanced Backend Architecture</p>
+        <h2>Certifications</h2>
+        <div class="certifications-grid">
+             <div class="cert-card">
+                 <div>
+                     <div class="cert-header">
+                         <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+                         <div class="cert-title">AWS Cloud</div>
+                     </div>
+                     <div class="cert-org">Amazon Web Services</div>
+                     <div class="cert-date">Credential Validation Enabled</div>
+                 </div>
+                 <a href="#" class="cert-link">View Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
              </div>
-             <div class="skill-card">
-                  <i class="fa-brands fa-java"></i>
-                  <p><b>Spring Boot</b></p>
-                  <p>Enterprise Java Systems</p>
+             
+             <div class="cert-card">
+                 <div>
+                     <div class="cert-header">
+                         <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+                         <div class="cert-title">Django Development</div>
+                     </div>
+                     <div class="cert-org">Advanced Backend Academy</div>
+                     <div class="cert-date">Issued 2024</div>
+                 </div>
+                 <a href="#" class="cert-link">View Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
              </div>
-             <div class="skill-card">
-                  <i class="fa-brands fa-php"></i>
-                  <p><b>PHP</b></p>
-                  <p>Dynamic Web Solutions</p>
+
+             <div class="cert-card">
+                 <div>
+                     <div class="cert-header">
+                         <div class="cert-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                         <div class="cert-title">Apple Swift</div>
+                     </div>
+                     <div class="cert-org">iOS Native Engineering</div>
+                     <div class="cert-date">Issued 2024</div>
+                 </div>
+                 <a href="#" class="cert-link">View Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
              </div>
-             <div class="skill-card">
-                  <i class="fa-solid fa-mobile-screen"></i>
-                  <p><b>Mobile Dev</b></p>
-                  <p>SwiftUI & iOS Development</p>
+
+             <div class="cert-card">
+                 <div>
+                     <div class="cert-header">
+                         <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+                         <div class="cert-title">ALX AI Essentials</div>
+                     </div>
+                     <div class="cert-org">ALX Africa</div>
+                     <div class="cert-date">Issued 2024</div>
+                 </div>
+                 <a href="#" class="cert-link">View Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
              </div>
         </div>
     </section>
 
-    <!-- Workflow Section -->
-    <section id="workflow" class="immersive-section reveal">
-        <h2>Creative Workflow</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fa-solid fa-list-check"></i>
-                <p><b>Agile Methodology</b></p>
-                <p>Scrum, Sprint Planning, Jira</p>
-            </div>
-             <div class="skill-card">
-                <i class="fa-solid fa-clipboard-list"></i>
-                <p><b>Project Management</b></p>
-                <p>Notion, Documentation, System Design</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-palette"></i>
-                <p><b>Creative Design</b></p>
-                <p>Digital Assets & Visual Content</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-video"></i>
-                <p><b>Content Creation</b></p>
-                <p>Video Editing & Storytelling</p>
+    <!-- GitHub Stats Section -->
+    <section id="github" class="immersive-section reveal">
+        <h2>GitHub Activity</h2>
+        <div class="github-stats-container">
+            <img src="https://github-readme-stats.vercel.app/api?username=manjoseph&show_icons=true&theme=tokyonight&hide_border=true" alt="Joseph's GitHub Stats">
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; width: 100%;">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs?username=manjoseph&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages">
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=manjoseph&theme=tokyonight&hide_border=true" alt="GitHub Streak">
             </div>
         </div>
     </section>
 
-    <!-- Restored Footer with Social Links -->
+    <!-- Timeline Section -->
+    <section id="timeline" class="immersive-section reveal">
+        <h2>Chronological Timeline</h2>
+        <div class="milestone-container">
+            <div class="milestone-item">
+                <div class="milestone-year">2022</div>
+                <div class="milestone-text">Enrolled in Software Engineering Program at Adventist University of Central Africa (AUCA).</div>
+                <div class="milestone-arrow"><i class="fa-solid fa-circle-chevron-down"></i></div>
+            </div>
+            
+            <div class="milestone-item">
+                <div class="milestone-year">2023</div>
+                <div class="milestone-text">Learned Django & Python backend web architecture; built first platform prototypes.</div>
+                <div class="milestone-arrow"><i class="fa-solid fa-circle-chevron-down"></i></div>
+            </div>
+            
+            <div class="milestone-item">
+                <div class="milestone-year">2024</div>
+                <div class="milestone-text">Collaborated as a backend Django developer in teams; built enterprise Java architectures.</div>
+                <div class="milestone-arrow"><i class="fa-solid fa-circle-chevron-down"></i></div>
+            </div>
+
+            <div class="milestone-item">
+                <div class="milestone-year">2025</div>
+                <div class="milestone-text">Architected and engineered MYESolution educational ecosystem as a solo developer.</div>
+                <div class="milestone-arrow"><i class="fa-solid fa-circle-chevron-down"></i></div>
+            </div>
+
+            <div class="milestone-item">
+                <div class="milestone-year">2026</div>
+                <div class="milestone-text">Expected Graduation (B.S. in Software Engineering). Currently focusing on AI agents and Cloud/DevOps.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion & Resume Section -->
+    <section id="faq" class="immersive-section reveal">
+        <h2>FAQ & Resume</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are you open to remote work and relocation?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, absolutely! I am highly open to remote software engineering positions and relocation opportunities worldwide.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is your primary software stack?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>My core competencies are centered on backend engineering using Java (Spring Boot) and Python (Django/Flask), paired with SQL/PostgreSQL databases, Docker container environments, and React/HTML5/CSS3 frontend clients.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you take on freelance consultations?</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! I work on freelance project architectures, backend developments, and custom system optimizations. Drop me a line through the contact form.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="resume" style="margin-top: 4rem; text-align: center;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Curriculum Vitae</h3>
+            <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 2rem;">
+                Interested in learning more about my courses, projects, and educational timeline? Access my full resume here.
+            </p>
+            <div class="resume-actions">
+                <a href="resume.pdf" target="_blank" class="cta-button">View Resume</a>
+                <a href="resume.pdf" download class="cta-button" style="background: transparent; color: var(--text);">Download PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expanded Footer -->
     <footer>
-        <p>&copy; 2025 Joseph Portfolio. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/ManJoseph" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/manjoseph/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/man.jo.se.ph/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.me/250784461730?text=Hello%20I%20found%20your%20website!" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">ManJoseph</a>
+                <p>Building scalable backend systems, secure architectures, and intelligent digital experiences.</p>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resume.pdf" target="_blank">View Resume</a></li>
+                        <li><a href="resume.pdf" download>Download CV</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <ul>
+                        <li><a href="https://github.com/ManJoseph" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/manjoseph/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://wa.me/250784461730" target="_blank">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Joseph Portfolio. All rights reserved.</p>
+            <p>Built with ❤️ by Joseph Manizabayo</p>
         </div>
     </footer>
 
@@ -161,5 +458,4 @@
         });
     </script>
 </body>
-
 </html>
